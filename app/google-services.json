@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "967143136747",
+    "firebase_url": "https://fillingstation-d86fd.firebaseio.com",
+    "project_id": "fillingstation-d86fd",
+    "storage_bucket": "fillingstation-d86fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967143136747:android:ef211d07cdea6412",
+        "android_client_info": {
+          "package_name": "com.example.fillingstation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967143136747-a935k5h0cpuvrs6nj6jr5uisbeflak44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fillingstation",
+            "certificate_hash": "1d079a4c812b82224038e13e29b7f4a49c19daaf"
+          }
+        },
+        {
+          "client_id": "967143136747-0khs7g3fmpcecap1l01m970kft4jaumi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChZFHoRxWBXAwOvYS7LnXRX5i12jpNvMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967143136747-0khs7g3fmpcecap1l01m970kft4jaumi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
