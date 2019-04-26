@@ -52,7 +52,9 @@ public class Signin extends AppCompatActivity {
                             User user = dataSnapshot.child(username.getText().toString()).getValue(User.class);
 
                             if(user.getPassword().equals(password.getText().toString())){
+
                                 Intent home = new Intent(Signin.this, Home.class);
+                                home.putExtra("USERNAME", username.getText().toString());
                                 startActivity(home);
                                 finish();
                             }
