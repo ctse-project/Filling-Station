@@ -54,6 +54,8 @@ public class Signin extends AppCompatActivity {
                             if(user.getPassword().equals(password.getText().toString())){
                                 Intent home = new Intent(Signin.this, Home.class);
                                 startActivity(home);
+//                                Intent map = new Intent(Signin.this,MapsActivity.class);
+//                                startActivity(map);
                                 finish();
                             }
                             else{

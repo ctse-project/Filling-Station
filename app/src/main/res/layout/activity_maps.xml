@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        tools:context=".MapsActivity" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_list_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#80000000"
+        android:padding="4dp" >
+
+        <EditText
+            android:id="@+id/TF_location"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorWhite"
+            android:text="Name"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/B_search"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"
+            android:text="Search" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/gas_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:src="@drawable/gas"
+        android:layout_gravity="bottom"/>
+</FrameLayout>
