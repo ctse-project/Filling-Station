@@ -52,7 +52,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         }
         if (id == R.id.nav_register){
-            Intent register = new Intent(Home.this, RegisterFillingStation.class);
+            Intent register = new Intent(Home.this, MapsActivity_RegisterStation.class);
             startActivity(register);
         }
 
