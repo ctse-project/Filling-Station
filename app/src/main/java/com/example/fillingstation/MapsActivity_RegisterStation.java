@@ -1,6 +1,7 @@
 package com.example.fillingstation;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -25,12 +26,10 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -69,8 +68,16 @@ public class MapsActivity_RegisterStation extends FragmentActivity implements On
         regloc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RegisterStation registerDialog = new RegisterStation();
-                registerDialog.show(getSupportFragmentManager(), "Model");
+                Intent intent = getIntent();
+                String uname = intent.getStringExtra("USERNAME");
+
+                Log.e("LAST LOCATION", lastloc.toString());
+
+                Intent regi = new Intent(MapsActivity_RegisterStation.this, RegisterStation.class);
+                regi.putExtra("USERNAME", uname);
+                regi.putExtra("LOCATION", lastloc.toString());
+                startActivity(regi);
+
             }
         });
     }
@@ -194,7 +201,6 @@ public class MapsActivity_RegisterStation extends FragmentActivity implements On
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
         Log.e("LOCATION 1 ", latLng.toString());
-
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);

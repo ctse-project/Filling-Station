@@ -52,7 +52,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         }
         if (id == R.id.nav_register){
+            Intent intent = getIntent();
+            String uname = intent.getStringExtra("USERNAME");
+
             Intent register = new Intent(Home.this, MapsActivity_RegisterStation.class);
+
+            register.putExtra("USERNAME", uname);
+
             startActivity(register);
         }
 
