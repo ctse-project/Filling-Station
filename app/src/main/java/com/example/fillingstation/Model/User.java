@@ -5,15 +5,17 @@ public class User {
     private String username;
     private String password;
     private String repassword;
+    private String phoneNumber;
 
     public User() {
 
     }
 
-    public User(String uname, String pword, String repword){
+    public User(String uname, String pword, String repword,String phoneNo){
         username = uname;
         password = pword;
         repassword = repword;
+        phoneNumber = phoneNo;
 
     }
 
@@ -40,4 +42,14 @@ public class User {
     public void setRepassword(String repword) {
         this.repassword = repword;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+
 }

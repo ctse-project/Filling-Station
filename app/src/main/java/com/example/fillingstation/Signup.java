@@ -21,7 +21,7 @@ import java.util.zip.DataFormatException;
 
 public class Signup extends AppCompatActivity {
 
-    EditText uname, pwd, repwd;
+    EditText uname, pwd, repwd,phoneNo;
     Button signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class Signup extends AppCompatActivity {
         uname = findViewById(R.id.username);
         pwd = findViewById(R.id.password);
         repwd = findViewById(R.id.repassword);
+        phoneNo = findViewById(R.id.phone_no);
 
         signup = findViewById(R.id.signup);
 
@@ -67,7 +68,7 @@ public class Signup extends AppCompatActivity {
                                 Toast.makeText(Signup.this, "Passwords does not match", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                User user = new User(uname.getText().toString(), pwd.getText().toString(),repwd.getText().toString());
+                                User user = new User(uname.getText().toString(), pwd.getText().toString(),repwd.getText().toString(),phoneNo.getText().toString());
                                 usertable.child(uname.getText().toString()).setValue(user);
                                 Toast.makeText(Signup.this, "Sign up Successfull", Toast.LENGTH_SHORT).show();
                                 finish();
