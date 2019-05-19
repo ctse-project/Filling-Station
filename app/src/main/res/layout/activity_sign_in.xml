@@ -17,6 +17,7 @@
         android:layout_marginBottom="8dp"
         android:background="#90EE90"
         android:text="Sign In"
+        android:onClick="onClick"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

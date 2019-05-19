@@ -4,17 +4,17 @@ public class User {
 
     private String username;
     private String password;
-    private String repassword;
+    private String email;
     private String phoneNumber;
 
     public User() {
 
     }
 
-    public User(String uname, String pword, String repword,String phoneNo){
+    public User(String uname, String pword,String email,String phoneNo){
         username = uname;
         password = pword;
-        repassword = repword;
+        this.email = email;
         phoneNumber = phoneNo;
 
     }
@@ -27,10 +27,6 @@ public class User {
         return password;
     }
 
-    public String getRepassword() {
-        return repassword;
-    }
-
     public void setUsername(String uname) {
         this.username = uname;
     }
@@ -39,8 +35,12 @@ public class User {
         this.password = pword;
     }
 
-    public void setRepassword(String repword) {
-        this.repassword = repword;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {
