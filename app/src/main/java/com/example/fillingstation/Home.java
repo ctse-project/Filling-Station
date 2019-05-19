@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -60,6 +61,31 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             register.putExtra("USERNAME", uname);
 
             startActivity(register);
+        }
+
+        if(id == R.id.edit_user){
+
+            Intent editUser = new Intent(Home.this, EditUser.class);
+            startActivity(editUser);
+
+
+        }
+
+        if(id == R.id.find_filling_station){
+
+            Intent fillingStation = new Intent(Home.this,MapsActivity.class);
+            startActivity(fillingStation);
+        }
+
+        if(id == R.id.deactivate_user){
+
+//            Intent deactivateUser = new Intent(Home.this,)
+            DeactivateUser deactivateUser = new DeactivateUser();
+            deactivateUser.deleteUser();
+            Intent goToSingIn = new Intent(Home.this,Signin.class);
+            Toast.makeText(getApplicationContext(), "User Deactivated", Toast.LENGTH_LONG).show();
+            startActivity(goToSingIn);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

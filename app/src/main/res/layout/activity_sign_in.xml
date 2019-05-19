@@ -54,7 +54,7 @@
         android:background="@android:color/background_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Username"
+        android:hint="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
