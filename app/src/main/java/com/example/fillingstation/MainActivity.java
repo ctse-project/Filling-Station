@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent showStations = new Intent(MainActivity.this, Signin.class);
+        startActivity(showStations);
 
         sigin = findViewById(R.id.signin);
         signup = findViewById(R.id.signup);

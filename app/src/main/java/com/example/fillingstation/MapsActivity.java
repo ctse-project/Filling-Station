@@ -134,7 +134,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         currentLocationmMarker = mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
+        mMap.animateCamera(CameraUpdateFactory.zoomBy(30));
 
         if(client != null)
         {
@@ -149,41 +149,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         switch(v.getId())
         {
-            case R.id.B_search:
-                EditText tf_location =  findViewById(R.id.TF_location);
-                String location = tf_location.getText().toString();
-                List<Address> addressList;
-
-
-                if(!location.equals(""))
-                {
-                    Geocoder geocoder = new Geocoder(this);
-
-                    try {
-                        addressList = geocoder.getFromLocationName(location, 5);
-
-                        if(addressList != null)
-                        {
-                            for(int i = 0;i<addressList.size();i++)
-                            {
-                                LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
-                                MarkerOptions markerOptions = new MarkerOptions();
-                                markerOptions.position(latLng);
-                                markerOptions.title(location);
-                                mMap.addMarker(markerOptions);
-                                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                                mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
+//            case R.id.B_search:
+//                EditText tf_location =  findViewById(R.id.TF_location);
+//                String location = tf_location.getText().toString();
+//                List<Address> addressList;
+//
+//
+//                if(!location.equals(""))
+//                {
+//                    Geocoder geocoder = new Geocoder(this);
+//
+//                    try {
+//                        addressList = geocoder.getFromLocationName(location, 5);
+//
+//                        if(addressList != null)
+//                        {
+//                            for(int i = 0;i<addressList.size();i++)
+//                            {
+//                                LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
+//                                MarkerOptions markerOptions = new MarkerOptions();
+//                                markerOptions.position(latLng);
+//                                markerOptions.title(location);
+//                                mMap.addMarker(markerOptions);
+//                                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+//                                mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+//                            }
+//                        }
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                break;
             case R.id.gas_button:
                 mMap.clear();
-                String hospital = "gas_station";
-                String url = getUrl(latitude, longitude, hospital);
+                String gasStation = "gas_station";
+                String url = getUrl(latitude, longitude, gasStation);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 

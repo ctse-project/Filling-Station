@@ -88,6 +88,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         }
 
+        if(id == R.id.registered_station){
+            RegisteredStationActivityMaps registeredStationActivityMaps = new RegisteredStationActivityMaps();
+            Intent registeredStation = new Intent(Home.this,RegisteredStationActivityMaps.class);
+            startActivity(registeredStation);
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
